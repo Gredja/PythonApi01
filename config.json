@@ -1,0 +1,10 @@
+{
+  "general": {
+  },
+  "api": {
+    "baseUrl" : "https://petstore.swagger.io",
+    "version" : "v2"
+  },
+  "ui": {
+  }
+}
