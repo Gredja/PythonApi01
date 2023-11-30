@@ -1,3 +1,6 @@
+from Constants import Constants
+from Helpers.Builders import Builders
+from Helpers.Checkers import is_variable_in_collection
 from Tests.base.api_base_test import TestApiBaseClass
 from Tests.base.base_test import TestBaseClass
 from urllib.parse import urljoin
@@ -9,6 +12,6 @@ class TestApiClass(TestApiBaseClass):
         rel = TestBaseClass().configuration.api.Api.version + '/store/inventory'
         url = urljoin(TestBaseClass().configuration.api.Api.baseUrl, rel)
 
-        response = requests.get(url)
+        response = Builders.http_request_builder(url=url);
 
-        assert str(response.status_code).startswith('20')
+        assert is_variable_in_collection(response.status_code, Constants.HTTP_SUCCESS) is True

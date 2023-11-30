@@ -19,9 +19,13 @@ class Configuration:
 
     @staticmethod
     def __get_configuration_from_file(self):
-        file = open('../config.json')
-        json_configuration = json.load(file, object_hook=lambda d: SimpleNamespace(**d))
-        file.close()
+        try:
+            file = open('../config.json')
+        except FileNotFoundError as error:
+            print(f'FileNotFoundError: {error.filename}')
+        else:
+            with file:
+                json_configuration = json.load(file, object_hook=lambda d: SimpleNamespace(**d))
 
         return self.__cast_json_to_object(json_configuration)
 
