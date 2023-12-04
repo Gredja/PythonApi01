@@ -1,5 +1,4 @@
 import json
-
 from Constants import Constants
 from Helpers.RequestExecutor import RequestExecutor
 from Helpers.Checkers import is_variable_in_collection
@@ -7,9 +6,6 @@ from Tests.base.api_base_test import TestApiBaseClass
 from Tests.base.base_test import TestBaseClass
 from urllib.parse import urljoin
 from Enums.RequestMethodEnum import RequestMethod
-
-import jsonschema
-from jsonschema import validate
 
 from Validators import JsonSchemas
 from Validators.JsonSchemaValidator import JsonSchemaValidator
