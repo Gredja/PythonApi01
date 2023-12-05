@@ -6,6 +6,7 @@
     "version": "v2"
   },
   "ui": {
-    "browser": "Chrome"
+    "browser": "Chrome",
+    "baseUrl": "https://petstore.swagger.io"
   }
 }

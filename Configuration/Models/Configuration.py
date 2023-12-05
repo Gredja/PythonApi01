@@ -35,5 +35,6 @@ class Configuration:
         configuration.api.Api.baseUrl = json_conf.api.baseUrl
         configuration.api.Api.version = json_conf.api.version
         configuration.ui.Ui.browser = json_conf.ui.browser
+        configuration.ui.Ui.baseUrl = json_conf.ui.baseUrl
 
         return configuration

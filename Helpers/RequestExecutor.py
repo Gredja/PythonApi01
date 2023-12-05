@@ -17,7 +17,7 @@ class RequestExecutor:
         http = urllib3.PoolManager()
 
         try:
-            response = http.request(str(request_method.name), url, headers=headers)
+            response = http.request(str(request_method.name), url, headers=headers, body=body)
         except response.exceptions.HTTPError as error:
             logging.error(error)
 
